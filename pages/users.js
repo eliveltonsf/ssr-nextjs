@@ -2,10 +2,14 @@ import React from "react";
 import Axios from "axios";
 
 import Link from "next/link";
+import Head from "next/head";
 
 const User = ({ users }) => {
   return (
     <div>
+      <Head>
+        <title>Usúarios</title>
+      </Head>
       <ul>
         {users.map((user) => (
           <li key={user.id}>{user.login}</li>
