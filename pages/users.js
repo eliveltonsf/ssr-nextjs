@@ -28,7 +28,6 @@ User.getInitialProps = async () => {
   const response = await Axios.get(
     "https://api.github.com/orgs/rocketseat/members"
   );
-  console.log(response.data);
   return { users: response.data };
 };
 
