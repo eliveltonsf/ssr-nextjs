@@ -6,7 +6,7 @@ import Head from "next/head";
 
 import Mylogo from "../public";
 
-import withAnalytics from "../src/hocs/withAnalytics";
+import withAnalytics from "~/hocs/withAnalytics";
 
 const Title = styled.h1`
   color: #069;

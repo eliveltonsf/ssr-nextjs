@@ -4,7 +4,7 @@ import Axios from "axios";
 import Link from "next/link";
 import Head from "next/head";
 
-import withAnalytics from "../src/hocs/withAnalytics";
+import withAnalytics from "~/hocs/withAnalytics";
 
 const User = ({ users }) => {
   return (
