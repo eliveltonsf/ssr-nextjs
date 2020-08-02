@@ -12,8 +12,10 @@ const Detail = ({ user }) => {
   );
 };
 
-Detail.getInitialProps = async () => {
-  const response = await axios.get(`htpps://api.github.com/users/eliveltonsf`);
+Detail.getInitialProps = async ({ query }) => {
+  const response = await axios.get(
+    `htpps://api.github.com/users/${query.user}`
+  );
 
   return { user: response.data };
 };
