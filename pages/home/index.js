@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import { FaArrowRight } from "react-icons/fa";
 
 import Link from "next/link";
 import Head from "next/head";
@@ -8,7 +8,7 @@ import Mylogo from "raiz/public";
 
 import withAnalytics from "~/hocs/withAnalytics";
 
-import { Container, Title, Description, Form } from "./style";
+import { Container, Title, Description, Form, SubmitButton } from "./style";
 
 class Home extends Component {
   state = {
@@ -17,7 +17,16 @@ class Home extends Component {
 
   handleInputChange = (e) => {
     this.setState({ org: e.target.value });
-    console.log(e.target.value);
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { org } = this.state;
+
+    console.log(org);
+
+    this.setState({ org: "" });
   };
 
   render() {
@@ -25,29 +34,30 @@ class Home extends Component {
 
     return (
       <Container>
-        <html>
-          <Head>
-            <title>Home</title>
-          </Head>
-        </html>
+        <Head>
+          <title>Home</title>
+        </Head>
         <Mylogo />
         <Title>Github Orgs</Title>
         <Description>
           Veja os membros das organizações filiadas ao github.
         </Description>
 
-        <Form onSubmit={() => {}}>
+        <Form onSubmit={this.handleSubmit}>
           <input
             type="text"
             placeholder="Pesquisar por uma organização"
             value={org}
             onChange={this.handleInputChange}
           />
+          <Link href={`/orgs/${org}`}>
+            <SubmitButton>
+              <a>
+                <FaArrowRight color="FFF" size={14} />
+              </a>
+            </SubmitButton>
+          </Link>
         </Form>
-
-        <Link href="/users">
-          <a>Usuarios</a>
-        </Link>
       </Container>
     );
   }

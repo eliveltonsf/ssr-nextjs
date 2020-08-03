@@ -1,22 +1,22 @@
 import React from "react";
-import Axios from "axios";
+import axios from "axios";
 
 import Link from "next/link";
 import Head from "next/head";
 
 import withAnalytics from "~/hocs/withAnalytics";
 
-const User = ({ users }) => {
+const User = ({ orgs }) => {
   return (
     <div>
       <Head>
         <title>Usúarios</title>
       </Head>
       <ul>
-        {users.map((user) => (
-          <li key={user.id}>
-            {user.login}
-            <Link href={`/users/${user.login}`}>
+        {orgs.map((org) => (
+          <li key={org.id}>
+            {org.login}
+            <Link href={`/users/${org.login}`}>
               <a>details</a>
             </Link>
           </li>
@@ -29,11 +29,12 @@ const User = ({ users }) => {
   );
 };
 
-User.getInitialProps = async () => {
-  const response = await Axios.get(
-    "https://api.github.com/orgs/rocketseat/members"
+User.getInitialProps = async ({ query }) => {
+  const response = await axios.get(
+    `https://api.github.com/orgs/${query.org}/members`
   );
-  return { users: response.data };
+
+  return { orgs: response.data };
 };
 
 export default withAnalytics()(User);
