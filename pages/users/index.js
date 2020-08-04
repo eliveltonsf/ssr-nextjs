@@ -4,7 +4,11 @@ import axios from "axios";
 import Link from "next/link";
 import Head from "next/head";
 
+import { FaInfo, FaAngleLeft } from "react-icons/fa";
+
 import withAnalytics from "~/hocs/withAnalytics";
+
+import { Title, Member } from "./style";
 
 const User = ({ orgs }) => {
   return (
@@ -12,18 +16,23 @@ const User = ({ orgs }) => {
       <Head>
         <title>Usúarios</title>
       </Head>
-      <ul>
+      <Title> Organization members</Title>
+      <Member>
         {orgs.map((org) => (
           <li key={org.id}>
-            {org.login}
+            <p>{org.login}</p>
             <Link href={`/users/${org.login}`}>
-              <a>details</a>
+              <a>
+                <FaInfo color="FFF" size={14} />
+              </a>
             </Link>
           </li>
         ))}
-      </ul>
+      </Member>
       <Link href="/">
-        <a>Voltar</a>
+        <a>
+          <FaAngleLeft color="FFF" size={48} />
+        </a>
       </Link>
     </div>
   );

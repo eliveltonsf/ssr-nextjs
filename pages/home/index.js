@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
 
 import Link from "next/link";
 import Head from "next/head";
@@ -53,7 +53,7 @@ class Home extends Component {
           <Link href={`/orgs/${org}`}>
             <SubmitButton>
               <a>
-                <FaArrowRight color="FFF" size={14} />
+                <FaAngleRight color="FFF" size={18} />
               </a>
             </SubmitButton>
           </Link>
