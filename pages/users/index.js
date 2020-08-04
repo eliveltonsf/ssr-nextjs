@@ -16,7 +16,7 @@ const User = ({ orgs }) => {
       <Head>
         <title>Usúarios</title>
       </Head>
-      <Title> Organization members</Title>
+      <Title> Organization members:</Title>
       <Member>
         {orgs.map((org) => (
           <li key={org.id}>

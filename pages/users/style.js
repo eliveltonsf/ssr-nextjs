@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Title = styled.h1`
   color: #fff;
   font-size: 40px;
-  margin-bottom: 30px;
+  margin: 15px 0;
 `;
 
 export const Member = styled.ul`
@@ -13,7 +13,7 @@ export const Member = styled.ul`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin: 15px 0;
 
   li {
     color: #fff;

@@ -19,16 +19,6 @@ class Home extends Component {
     this.setState({ org: e.target.value });
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-
-    const { org } = this.state;
-
-    console.log(org);
-
-    this.setState({ org: "" });
-  };
-
   render() {
     const { org } = this.state;
 
@@ -43,7 +33,7 @@ class Home extends Component {
           Veja os membros das organizações filiadas ao github.
         </Description>
 
-        <Form onSubmit={this.handleSubmit}>
+        <Form>
           <input
             type="text"
             placeholder="Pesquisar por uma organização"

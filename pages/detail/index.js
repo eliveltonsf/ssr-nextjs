@@ -1,19 +1,37 @@
 import react from "react";
 import axios from "axios";
+import { FaHome, FaGithubSquare } from "react-icons/fa";
 
 import Head from "next/head";
+import Link from "next/link";
+
+import { User, Links } from "./style";
 
 import withAnalytics from "~/hocs/withAnalytics";
 
 const Detail = ({ user }) => {
   return (
-    <div>
+    <User>
       <Head>
         <title>Details</title>
       </Head>
-      <h1>{user.login}</h1>
+
       <img src={user.avatar_url} width="200" />
-    </div>
+
+      <h1>{user.name}</h1>
+      <p> {user.bio}</p>
+
+      <Links>
+        <Link href={`/`}>
+          <a>
+            <FaHome color="FFF" size={32} />
+          </a>
+        </Link>
+        <a href={`https://github.com/${user.login}`}>
+          <FaGithubSquare color="FFF" size={32} />
+        </a>
+      </Links>
+    </User>
   );
 };
 
