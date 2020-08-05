@@ -4,8 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/lab": "^4.0.0-alpha.56",
     "axios": "^0.19.2",
     "next": "^9.5.1",
     "next-routes": "^1.4.2",
