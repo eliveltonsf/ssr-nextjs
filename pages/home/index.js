@@ -10,6 +10,14 @@ import withAnalytics from "~/hocs/withAnalytics";
 
 import { Container, Title, Description, Form, SubmitButton } from "./style";
 
+function checkInputValue(org) {
+  if (org == null || org == "" || org == undefined) {
+    return (org = "/error");
+  }
+
+  return `/orgs/${org}`;
+}
+
 class Home extends Component {
   state = {
     org: "",
@@ -40,7 +48,7 @@ class Home extends Component {
             value={org}
             onChange={this.handleInputChange}
           />
-          <Link href={`/orgs/${org}`}>
+          <Link href={`${checkInputValue(org)}`}>
             <SubmitButton>
               <a>
                 <FaAngleRight color="FFF" size={18} />

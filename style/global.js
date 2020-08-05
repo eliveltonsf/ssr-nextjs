@@ -23,7 +23,7 @@ export default createGlobalStyle`
     align-content: center;
   }
 
-  body, input, button {
+  body, input{
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
   }

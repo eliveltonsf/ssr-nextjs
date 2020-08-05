@@ -3,4 +3,5 @@ const routes = require("next-routes");
 module.exports = routes()
   .add("/", "home")
   .add("/orgs/:org", "users")
-  .add("/users/:user", "detail");
+  .add("/users/:user", "detail")
+  .add("/error", "error");
