@@ -25,14 +25,14 @@
 
 <p align="center">
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#structure">Structure</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#objective">Project's goal</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#result">Result</a>
+  <a href="#result">Result</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#structure">Structure</a>
 </p>
 
 <br />
 
-<h2 id="techonologies" name="technologies">
+<h2 id="technologies" name="technologies">
 🚀 Technologies
 </h2>
 
@@ -46,6 +46,32 @@
 - [Styled Components](https://styled-components.com/)
 
 
+<br />
+
+<h2 id="objective" name="objective">
+🎯 Project's goal
+</h2>
+
+I created this application with the intuition to improve my understanding of ssr, as well as knowing the nextjs, it is very interesting how they work together, the base application is created following the teachings of rocketseat, but the whole layout and styling were a great challenge for me, I really liked the result.
+
+<br />
+
+<h2 id="result" name="result">
+✅ Result
+</h2>
+
+#### Main screen
+<h5 align="center"><img src="./src/screenshots/main.png"/>
+
+#### Orgs Members screen
+
+<h5 align="center"><img src="./src/screenshots/orgsMembers.png"/>
+
+#### Member screen
+
+<h5 align="center"><img src="./src/screenshots/member.png"/>
+
+<br />
 <br />
 
 <h2 id="structure" name="structure">
@@ -181,30 +207,7 @@ export default function Mylogo() {
 
 <br />
 
-<h2 id="objective" name="objective">
-🎯 Project's goal
-</h2>
 
-I created this application with the intuition to improve my understanding of ssr, as well as knowing the nextjs, it is very interesting how they work together, the base application is created following the teachings of rocketseat, but the whole layout and styling were a great challenge for me, I really liked the result.
-
-<br />
-
-<h2 id="result" name="result">
-✅ Result
-</h2>
-
-#### Main screen
-<h5 align="center"><img src="./src/screenshots/main.png"/>
-
-#### Orgs Members screen
-
-<h5 align="center"><img src="./src/screenshots/orgsMembers.png"/>
-
-#### Member screen
-
-<h5 align="center"><img src="./src/screenshots/member.png"/>
-
-<br />
 
 <hr>
 
