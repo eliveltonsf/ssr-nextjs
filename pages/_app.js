@@ -5,7 +5,7 @@ import GlobalStyle from "raiz/style/global";
 
 const theme = {
   colors: {
-    primary: "#0070f3",
+    primary: "#15202b",
   },
 };
 
